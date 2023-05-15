@@ -11,7 +11,7 @@ function ExpenseItem(props) {
       
       <ExpenseDetails amount={props.amount}  location={props.location} title={props.title} />
       
-    </div>
+    </div> 
   )
 }
 

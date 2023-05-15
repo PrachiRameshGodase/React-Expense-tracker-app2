@@ -8,7 +8,7 @@ function ExpenseDetails(props) {
         <h2>{props.location}</h2>
         <div className='expense-item__price'>${props.amount}</div>
     </div>
-  )
+  ) 
 }
 
 export default ExpenseDetails
