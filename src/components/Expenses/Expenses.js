@@ -3,6 +3,7 @@ import ExpensesFilter from './ExpensesFilter';
 import ExpenseItem from './ExpenseItem';
 import Card from "../UI/Card";
 import ExpensesList from './ExpensesList';
+import ExpensesChart from './ExpensesChart';
 import "./Expenses.css"
 
 
@@ -38,7 +39,7 @@ const filteredExpenses = props.items.filter((expense) => {
   return (
     <Card className='expenses'>
       <ExpensesFilter selected={filteredYear} onChangeFilter={filteresChangeHandler}/>
- 
+      <ExpensesChart expenses={filteredExpenses}/>
       {filteredExpenses.length===1 && <h2 className='expenses-list__fallback'>Only single Expense here Please add more...</h2>} 
       <ExpensesList items={filteredExpenses}/>
     
