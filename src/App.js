@@ -4,8 +4,7 @@ import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
 
 
-const DUMMY__EXPENSES=[
-  {
+const DUMMY__EXPENSES=[{
   id:"e1",
   title:"Toilet Paper",
   amount:"94.12",
@@ -32,28 +31,35 @@ const DUMMY__EXPENSES=[
     amount: 450,
     date: new Date(2021, 5, 12),
     location: "Carpenter",
-  }
-]
-const App=()=> {
+}]
+
+
+
+
+const App=()=>{
   const [expenses, setExpenses]=useState(DUMMY__EXPENSES)
-    
+
   
-  const addExpenseHandler=(expense)=>{
+ const addExpenseHandler=(expense)=>{
     // console.log("In App.js");
     // console.log(expense);
-    setExpenses(prevExpenses=>{
+    setExpenses((prevExpenses)=>{
       return [expense, ...prevExpenses]
-    });
+    })
+    
+  
   }
   // return React.createElement("div",{},
   // React.createElement("h2",{},"Let's get started!"),React.createElement(Expenses,{items:expenses}))
   return (
     <div>
-      <h2>Let's get started</h2>
+      
       <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses}/>
+      
     </div>
   );
 }
 
 export default App;
+ 
