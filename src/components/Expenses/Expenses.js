@@ -11,6 +11,7 @@ import "./Expenses.css"
 const Expenses=(props) =>{
 const [filteredYear,setFilteredYear]=useState("2020");
 
+
 const filteresChangeHandler=(selectedYear)=>{
   setFilteredYear(selectedYear)
 };
@@ -18,7 +19,6 @@ const filteresChangeHandler=(selectedYear)=>{
 const filteredExpenses = props.items.filter((expense) => {
   return expense.date.getFullYear().toString() === filteredYear;
 });
-
 
 
 
@@ -41,7 +41,7 @@ const filteredExpenses = props.items.filter((expense) => {
       <ExpensesFilter selected={filteredYear} onChangeFilter={filteresChangeHandler}/>
       <ExpensesChart expenses={filteredExpenses}/>
       {filteredExpenses.length===1 && <h2 className='expenses-list__fallback'>Only single Expense here Please add more...</h2>} 
-      <ExpensesList items={filteredExpenses}/>
+      <ExpensesList items={filteredExpenses} />
     
     </Card>
   )

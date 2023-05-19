@@ -5,7 +5,8 @@ import Card from "../UI/Card";
 import "./ExpenseItem.css"
 
 const ExpenseItem=(props) =>{
-
+  
+  
   // const [title,setTitle]=useState(props.title);
 
   // const [amount,setAmount]=useState(props.amount);
@@ -15,7 +16,7 @@ const ExpenseItem=(props) =>{
   //   console.log(title);
   // }
   // const deleteExpense=()=>{ 
-  //   setAmount("100")
+  //   setAmount("100") 
   //   console.log(amount);
   // }
   
@@ -27,6 +28,7 @@ const ExpenseItem=(props) =>{
       <ExpenseDetails amount={props.amount}  location={props.location} title={props.title} />
       {/* <button onClick={clickHandler}>Change Title</button>
       <button onClick={deleteExpense}>Delete Expense</button> */}
+      
 
        
     </Card>  
